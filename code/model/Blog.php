@@ -1049,7 +1049,7 @@ class Blog_Controller extends Page_Controller
 
         $this->blogPosts = $dataRecord->getBlogPosts();
 
-        $rss = new RSSFeed($this->blogPosts, $this->Link(), $this->MetaTitle, $this->MetaDescription);
+        $rss = new RSSFeed($this->blogPosts, $this->Link('rss'), $this->MetaTitle, $this->MetaDescription);
 
         $this->extend('updateRss', $rss);
 
